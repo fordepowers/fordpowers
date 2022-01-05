@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Ford Powers</title>
+  <meta name="description" content="A simple HTML Portfolio site">
+  <meta name="monetization" content="https://buymeacoffee.com/fordepowers">
+
+  <meta property="og:title" content="Ford Powers Portfolio">
+  <meta property="og:description" content="A simple HTML Portfolio site">
+  <link rel="icon" href="images/stag-clear.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      <a href="#home">Ford Powers</a>
+    </h1>
+    <nav>
+      <a href="#website">This Website</a>
+      <a href="#blog">Blog</a>
+      <a href="#videos">Videos</a>
+      <a href="#portfolio">Portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+
+
+    <!-- ----------
+        ---- HOME  ----
+        ----------- -->
+
+    <section id="home">
+
+      <img src="images/portrait208.png" class="portrait" />
+      <p style="text-align: center;">Hello! My name is Ford Powers.</p>
+      <hr />
+      <p>I'm a <b><u>cybersecurity engineer</u></b> by education, a <b><u>software developer</u></b> by experience, and a
+        <b>tech
+          enthusiast</b> by nature.
+      </p>
+      <p>Like many kids born after Y2k, I grew up with a love of technology and an insatiable curiosity of how to break
+        things. Naturally this led me to <em>The Dark Arts™</em> of information assurance and cybersecurity.</p>
+      <p>This simple portfolio site was created to organize my thoughts and improve my skills, you can read about it
+        <a href="#website">here.</a>
+      </p>
+
+    </section>
+
+    <!-- ----------
+        ---- Website -----
+        ----------- -->
+
+    <section id="website">
+
+      <p>This entire site is a single <abbr title="Hypertext Markup Language">HTML</abbr> file, known as a
+        Single-File-Site or SFS. For navigation, it
+        simply uses the <code>#anchor</code> suffix (from <a
+          href="http://info.cern.ch/hypertext/WWW/Addressing/Addressing.html">1992</a>) and the <code>:target</code>
+        <abbr title="Cascading Style Sheets">CSS</abbr> selector to show and hide pages/content.
+      </p>
+
+      <p>There's no JavaScript, no database, no external dependencies, no CDNs to query, no CSS <code>url()</code> to
+        gather. The entire site is one 16kb transfer. Yet it still works with screen readers and has all the needed
+        accessibility features.</p>
+
+      <p>I started with the fantastic <a href="https://github.com/cadars/john-doe">john doe template</a> from cadars and
+        added some flavor for building and hosting. </p>
+
+      <p>Why? After finishing Epic React (which is a great course) I felt too 'in the weeds' of dynamic Javascript web
+        development, and I wanted to take a step back out into plain ole' HTML.</p>
+      <small>Also, my portfolio site could be all fancypants and require the bandwidth of a small nation just to load
+        the React dependencies but it doesn't
+        <em>need</em> to be. Keeping the attack surface of this site to practically zero keeps me sane. Can't have <abbr
+          title="Cross Site Scripting">XSS</abbr>
+        if there's literally no <code>script</code> tag on the site.</small>
+
+    </section>
+    <!-- ----------
+      ---- BLOG -----
+      ----------- -->
+
+    <section id="blog">
+
+      <article>
+        <h2>Unfilled Jobs in Cybersecurity <time>12.26.2021</time></h2>
+        <p>Now I haven't exactly been around the tech industry since it's birth, but I have grown up in a tech-centric
+          world and managed to garner some opinions from how I've seen things done.</p>
+        <p>Consider me the best qualified to write an op-ed about 'young cybersecurity professionals' since afterall, I
+          am one.</p>
+        <p>Read any sort of news article at any time in the last 8 years and you'll be bombarded with language about how
+          deserately we need cybersecurity professionals. Everytime I look at the number of unfilled jobs it seems to
+          grow larger.</p>
+      </article>
+
+    </section>
+
+    <!-- ----------
+      ---- VIDEOS ---
+      ----------- -->
+
+    <section id="videos">
+
+      <p>One of my many<label for="fn3">1</label><input type="checkbox" id="fn3"><small>
+
+          Hacking <em>(creating)</em>, hacking <em>(destroying)</em>, hacking <em>(literally, like with an axe)</em>,
+          hiking <em>(not to be confused with hacking)</em>, and videography.
+
+        </small> hobbies includes videography. Here's a few I've made or edited.</p>
+
+      <div class="grid">
+        <a href="#img-01"><img loading="lazy" alt="" src="img/300x300.png"></a>
+        <a href="#img-02"><img loading="lazy" alt="" src="img/400x300.png"></a>
+      </div>
+
+    </section>
+
+
+    <!-- ----------
+      -- PORTFOLIO --
+      ----------- -->
+
+    <section id="portfolio">
+
+      <div class="slides">
+        <figure><img loading="lazy" alt="" src="img/4000x3000.png"></figure>
+        <figure><img loading="lazy" alt="" src="img/3000x4000.png"></figure>
+        <figure><img loading="lazy" alt="" src="img/4000x3000.png"></figure>
+        <figure>
+          <p>You could also have text over here…</p>
+        </figure>
+        <figure>
+          <img loading="lazy" alt="" src="img/1000x1000.png">
+          <figcaption>…or image captions</figcaption>
+        </figure>
+        <figure style="background:#fdcb39">
+          <img loading="lazy" alt="" src="img/3000x4000.png">
+          <figcaption>add a solid background</figcaption>
+        </figure>
+        <figure class="cover">
+          <img loading="lazy" alt="" src="img/design.jpg">
+          <p style="color:#fff">or go full bleed</p>
+        </figure>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ----------
+    - HI-RES IMAGES
+    ----------- -->
+
+  <!-- For the PHOTOS grid -->
+
+  <a href="#photos" class="lightbox" id="img-01"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-02"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-03"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
+  <a href="#photos" class="lightbox" id="img-04"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-05"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-06"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
+  <a href="#photos" class="lightbox" id="img-07"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-08"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-09"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
+  <a href="#photos" class="lightbox" id="img-10"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-11"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-12"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
+  <a href="#photos" class="lightbox" id="img-13"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-14"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
+  <a href="#photos" class="lightbox" id="img-15"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
+
+  <!-- Other images -->
+
+  <a href="#blog" class="lightbox" id="nice-image"><img loading="lazy" alt="Tom from Myspace" src="img/tom.jpg"></a>
+
+</body>
+
+</html>
