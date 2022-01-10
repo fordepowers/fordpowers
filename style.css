@@ -8,7 +8,7 @@
   --textcolor: #dadada;
   --bgcolor: #111112;
   --highlight: #00d6ff;
-
+  --maxwidth: calc(64em)
 }
 
 body {
@@ -18,20 +18,20 @@ body {
   color: var(--textcolor);
   background: var(--bgcolor);
   position: relative;
-  max-width: 64em;
+  max-width: var(--maxwidth);
   /* remove this for a full-width layout */
   margin: 0 auto;
-  /* centers the layout */
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background-color: var(--bgcolor);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--highlight);
+  border-radius: 6px;
 }
 
 /* ------- Sections ------- */
@@ -58,7 +58,6 @@ section#home {
 }
 
 /* ------- Header ------- */
-
 header {
   padding: 5vw 5vw 0 5vw;
   display: flex;
@@ -73,7 +72,7 @@ header h1 {
   flex: 1;
   /* pushes nav to the right */
   white-space: nowrap;
-  padding: 0 5vw .5em 0;
+  padding: 0;
 }
 
 header a {
@@ -85,7 +84,19 @@ nav a:not(:last-of-type) {
 }
 
 /* ------ Footer -------- */
+main {
+  position: relative;
+  min-height: 100vh;
+}
 
+footer {
+  position: absolute;
+  text-align: center;
+  background-color: var(--bgcolor);
+  height: 2.5em;
+  bottom: 0;
+  width: 100%;
+}
 
 /* ------- General ------- */
 
@@ -109,8 +120,24 @@ h2, h3, h4 {
   margin: 1.6em 0 .6em 0;
 }
 
+span.blog {
+  font-size: 1em;
+  font-weight: 600;
+  padding-left: 1em;
+}
+
 p, ul, ol, article {
   margin-bottom: .6em;
+}
+
+details>summary::marker {
+  font-size: 1.2em;
+  color: var(--highlight);
+  content: "🡲";
+}
+
+details[open]>summary::marker {
+  content: "🡳";
 }
 
 ul {
@@ -134,14 +161,14 @@ b, strong {
 }
 
 small {
-  font-size: .85em;
+  font-size: .8em;
 }
 
 hr {
   height: 1px;
   border: 0;
   background: currentColor;
-  opacity: .1;
+  opacity: .2;
   margin: 1.2em 0;
 }
 
@@ -182,7 +209,6 @@ img, svg, video, audio {
 img.portrait {
   width: 13em;
   border-radius: 50%;
-  margin-left: calc(50% - 6.5em);
   margin-bottom: 1.5em;
   filter: drop-shadow(-2px 4px 3px #000) brightness(0.9) contrast(1.1);
 }
@@ -249,37 +275,6 @@ input:checked+small {
 
 /* Figures */
 
-figure {
-  margin: 2em 0 1.5em 0;
-}
-
-figure figcaption {
-  margin: 0.8em 0 0 0;
-  font-size: .85em;
-  opacity: .7;
-}
-
-/* Responsive video embeds */
-
-figure.video {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  height: 0;
-  overflow: hidden;
-}
-
-figure.video iframe, figure.video object, figure.video embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  visibility: hidden;
-  /* so loading="lazy" should work? */
-}
-
 section:target iframe {
   visibility: visible;
 }
@@ -339,7 +334,7 @@ a[href$=".png"]:before {
 /* ------- News ------- */
 
 article+article {
-  margin-top: 4.5em;
+  margin-top: 1em;
 }
 
 article h2 {
@@ -397,36 +392,19 @@ article time {
   left: 0;
   right: 0;
   height: 100vh;
+  padding: 0 5vw 0 5vw;
+  max-width: 64em;
+  margin: 0 auto;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
 .slides figure {
   height: 100vh;
-  padding: 0 5vw;
-  margin: 0;
   display: grid;
   place-items: center;
   align-content: center;
   scroll-snap-align: center;
-}
-
-.slides figure img {
-  max-height: 88vh;
-  /* Adjust if needed */
-}
-
-.slides figure.cover {
-  padding: 0;
-}
-
-.slides figure.cover img {
-  max-height: none;
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
 }
 
 /* ------- Lightbox ------- */
@@ -496,7 +474,7 @@ article time {
 
 @media only screen and (max-width: 680px) {
   body {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 

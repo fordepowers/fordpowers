@@ -23,87 +23,178 @@
       <a href="#home">Ford Powers</a>
     </h1>
     <nav>
-      <a href="#website">This Website</a>
+      <a href="#projects">Projects</a>
       <a href="#blog">Blog</a>
-      <a href="#videos">Videos</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
 
-
-    <!-- ----------
-        ---- HOME  ----
-        ----------- -->
+    <!-- HOME -->
 
     <section id="home">
 
-      <img src="images/portrait208.png" class="portrait" />
-      <p style="text-align: center;">Hello! My name is Ford Powers.</p>
-      <hr />
-      <p>I'm a <b><u>cybersecurity engineer</u></b> by education, a <b><u>software developer</u></b> by experience, and
-        a
-        <b>tech
-          enthusiast</b> by nature.
-      </p>
-      <p>Like many kids born after Y2k, I grew up with a love of technology and an insatiable curiosity of how to break
-        things. Naturally this led me to <em>The Dark Arts™</em> of information assurance and cybersecurity.</p>
-      <p>This simple portfolio site was created to organize my thoughts and improve my skills, you can read about it
-        <a href="#website">here.</a>
-      </p>
+      <div class="slides">
+        <figure id="start">
+          <img src="images/portrait208.png" class="portrait" />
+          <p style="text-align: center;">Hello! My name is Ford Powers.</p>
+          <hr />
+          <p>I'm a <a href="#cybersecurity">cybersecurity engineer</a> by education, a <a href="#software">software
+              developer</a> by experience,
+            and
+            a
+            <a href="#tech">tech
+              enthusiast</a> by nature.
+          </p>
+          <p>Like many kids born after Y2k, I grew up with a love of technology and an insatiable curiosity of how to
+            break
+            things. Fairly quickly this led me to <em>The Dark Arts™</em> of information assurance and cybersecurity.
+          </p>
+        </figure>
+        <figure id="cybersecurity">
+          <p>What originally got me into information assurance wasn't attending a conference or reading some hackernews
+            article, it was born out of my love of the cyberpunk genre and characters like the Technomancer. Something
+            about it just tickled my curiosity enough for a deep dive.</p>
+          <p>I focused that curiosity and when I was 16 I began studying Cybersecurity at Columbia Basin College. While
+            still in college I landed a
+            full-time internship at <a href="https://www.pnnl.gov/">Pacific Northwest National Laboratory</a>, assisting
+            an automated software testing team.
+          </p>
+          <p>I'm forever grateful to those formative early years at PNNL, simply because starting off by working in
+            application
+            development had a huge positive impact on my cybersecurity education. Something I think a lot of cyber
+            researchers miss is for there to be <em>information assurance</em> there has to first be
+            <em>information</em>.
+          </p>
+
+          <p>In December of 2020 I received my Bachelor's of Applied Science in cybersecurity, and graduated cum laude.
+            Shortly after, I was hired on as a Cybersecurity Engineer at PNNL.
+          </p>
+        </figure>
+        <figure id="software">
+          <p>In a strange twist, most of my previous work experience is actually in software development and quality
+            assurance.
+          </p>
+          <p>From day one at PNNL I was writing all kinds of software testing suites to aid in managing massive
+            application quality assurance. Everything from traditional scripting suites like
+            <code>Selenium Webdriver</code>, some
+            newer stuff in <code>Testng</code> and <code>Cypress</code>, and a lot of <code>Jest</code> unit tests too.
+          </p>
+          <p>This gave me a really solid appreciation for the artistry of software development. I was able to use my
+            education to inject and advocate for security standards in the applications we were building: naturally,
+            this led me down the unique path of <a
+              href="https://en.wikipedia.org/wiki/Software_development_security">software development security</a>.</p>
+          <p>And that's where I've been ever since! I never lost my love (or skills!) for making applications. Go check
+            out my <a href="#projects">projects</a> to see what I'm coding/brewing/thinking up.</p>
+        </figure>
+        <figure id="tech">
+          <p>Last but not least, I'm a die-hard techie. My pursuit of technology has led me down some wacky and fun
+            paths (check out my <a href="#blog">blog</a> for some examples).</p>
+          <p>Some deep dives I've gone on:
+          </p>
+          <ul>
+            <li>3D printing (and 3D printer fabrication/customization)</li>
+            <li>Arduino programming and embedded systems design</li>
+            <li>Portable Raspberry Pi setups (including the infamous Pwnagotchi</li>
+            <li>PC building and assembly</li>
+            <li>Ethereum development and blockchain programming</li>
+            <li>HVAC custom system creation using excess mining rig heat</li>
+          </ul>
+          <h2 style="padding-top: 3em;"><a href="#start">⇑ Back to top ⇑</a></h2>
+        </figure>
+      </div>
 
     </section>
 
-    <!-- ----------
-        ---- Website -----
-        ----------- -->
+    <!-- Projects -->
 
-    <section id="website">
-
-      <p>This entire site is a single <abbr title="Hypertext Markup Language">HTML</abbr> file, known as a
-        Single-File-Site or SFS. For navigation, it
-        simply uses the <code>#anchor</code> suffix (from <a
-          href="http://info.cern.ch/hypertext/WWW/Addressing/Addressing.html">1992</a>) and the <code>:target</code>
-        <abbr title="Cascading Style Sheets">CSS</abbr> selector to show and hide pages/content.
-      </p>
-
-      <p>There's no JavaScript, no database, no external dependencies, no CDNs to query, no CSS <code>url()</code> to
-        gather. The entire site is one 16kb transfer. Yet it still works with screen readers and has all the needed
-        accessibility features.</p>
-
-      <p>I started with the fantastic <a href="https://github.com/cadars/john-doe">john doe template</a> from cadars and
-        added some flavor for building and hosting. </p>
-
-      <p>Why? After finishing Epic React (which is a great course) I felt too 'in the weeds' of dynamic Javascript web
-        development, and I wanted to take a step back out into plain ole' HTML.</p>
-      <p>Several great developers have started down this path of doing things the real old way, like <a
-          href="https://eev.ee/blog/2016/03/06/maybe-we-could-tone-down-the-javascript/">Eevee here.</a></p>
-      <small>Also, my portfolio site could be all fancypants and require the bandwidth of a small nation just to load
-        the React dependencies but it doesn't
-        <b><em>need</em></b> to be. Keeping the attack surface of this site to practically zero keeps me sane. Can't
-        have <abbr title="Cross Site Scripting">XSS</abbr>
-        if there's literally no <code>script</code> tag on the site.</small>
+    <section id="projects">
 
     </section>
-    <!-- ----------
-      ---- BLOG -----
-      ----------- -->
+
+    <!-- BLOG -->
 
     <section id="blog">
-
       <article>
-        <h2>Unfilled Jobs in Cybersecurity <time>12.26.2021</time></h2>
-        <p>// TODO</p>
+        <details>
+          <summary>
+            <span class="blog">Creating a Website in Only HTML <time>12.26.2021</time></span>
+          </summary>
+          <hr />
+          <p>This entire site is a single <abbr title="Hypertext Markup Language">HTML</abbr> file, known as a
+            Single-File-Site or SFS. For navigation, it
+            simply uses the <code>#anchor</code> suffix (from <a
+              href="http://info.cern.ch/hypertext/WWW/Addressing/Addressing.html">1992</a>) and the <code>:target</code>
+            <abbr title="Cascading Style Sheets">CSS</abbr> selector to show and hide pages/content.
+          </p>
+
+          <p>There's no JavaScript, no database, no external dependencies, no CDNs to query, no CSS <code>url()</code>
+            to
+            gather. The entire site is one 16kb transfer. Yet it still works with screen readers and has all the needed
+            accessibility features.</p>
+
+          <p>I started with the fantastic <a href="https://github.com/cadars/john-doe">john doe template</a> from cadars
+            and
+            added some flavor for building and hosting. </p>
+
+          <p>Why? After finishing Epic React (which is a great course) I felt too 'in the weeds' of dynamic Javascript
+            web
+            development, and I wanted to take a step back out into plain ole' HTML.</p>
+          <p>Several great developers have started down this path of doing things the real old way, like <a
+              href="https://eev.ee/blog/2016/03/06/maybe-we-could-tone-down-the-javascript/">Eevee here.</a></p>
+          <p>There's a bunch of other reasons why one would want to implement such a site - for instance most Tor users
+            have Javascript turned entirely off on their browsers for security reasons, this site would still function
+            100% in that case.</p>
+          <small>Also, my portfolio site could be all fancypants and require the bandwidth of a small nation just to
+            load
+            the React dependencies but it doesn't
+            <b><em>need</em></b> to be. Keeping the attack surface of this site to practically zero keeps me sane. Can't
+            have <abbr title="Cross Site Scripting">XSS</abbr>
+            if there's literally no <code>script</code> tag on the site.</small>
+        </details>
+      </article>
+      <article>
+        <details>
+          <summary>
+            <span class="blog">Becoming a Time Lord <time>1.09.2022</time></span>
+          </summary>
+          <hr />
+          <p>This entire site is a single <abbr title="Hypertext Markup Language">HTML</abbr> file, known as a
+            Single-File-Site or SFS. For navigation, it
+            simply uses the <code>#anchor</code> suffix (from <a
+              href="http://info.cern.ch/hypertext/WWW/Addressing/Addressing.html">1992</a>) and the <code>:target</code>
+            <abbr title="Cascading Style Sheets">CSS</abbr> selector to show and hide pages/content.
+          </p>
+
+          <p>There's no JavaScript, no database, no external dependencies, no CDNs to query, no CSS <code>url()</code>
+            to
+            gather. The entire site is one 16kb transfer. Yet it still works with screen readers and has all the needed
+            accessibility features.</p>
+
+          <p>I started with the fantastic <a href="https://github.com/cadars/john-doe">john doe template</a> from cadars
+            and
+            added some flavor for building and hosting. </p>
+
+          <p>Why? After finishing Epic React (which is a great course) I felt too 'in the weeds' of dynamic Javascript
+            web
+            development, and I wanted to take a step back out into plain ole' HTML.</p>
+          <p>Several great developers have started down this path of doing things the real old way, like <a
+              href="https://eev.ee/blog/2016/03/06/maybe-we-could-tone-down-the-javascript/">Eevee here.</a></p>
+          <small>Also, my portfolio site could be all fancypants and require the bandwidth of a small nation just to
+            load
+            the React dependencies but it doesn't
+            <b><em>need</em></b> to be. Keeping the attack surface of this site to practically zero keeps me sane. Can't
+            have <abbr title="Cross Site Scripting">XSS</abbr>
+            if there's literally no <code>script</code> tag on the site.</small>
+        </details>
       </article>
 
     </section>
 
-    <!-- ----------
-      ---- VIDEOS ---
-      ----------- -->
+    <!-- CONTACT -->
 
-    <section id="videos">
+    <section id="contact">
 
       <p>One of my many<label for="fn3">1</label><input type="checkbox" id="fn3"><small>
 
@@ -118,60 +209,17 @@
       </div>
 
     </section>
-
-
-    <!-- ----------
-      -- PORTFOLIO --
-      ----------- -->
-
-    <section id="portfolio">
-
-      <div class="slides">
-        <figure><img loading="lazy" alt="" src="img/4000x3000.png"></figure>
-        <figure><img loading="lazy" alt="" src="img/3000x4000.png"></figure>
-        <figure><img loading="lazy" alt="" src="img/4000x3000.png"></figure>
-        <figure>
-          <p>You could also have text over here…</p>
-        </figure>
-        <figure>
-          <img loading="lazy" alt="" src="img/1000x1000.png">
-          <figcaption>…or image captions</figcaption>
-        </figure>
-        <figure style="background:#fdcb39">
-          <img loading="lazy" alt="" src="img/3000x4000.png">
-          <figcaption>add a solid background</figcaption>
-        </figure>
-        <figure class="cover">
-          <img loading="lazy" alt="" src="img/design.jpg">
-          <p style="color:#fff">or go full bleed</p>
-        </figure>
-      </div>
-
-    </section>
-
+    
+    
   </main>
-
-  <!-- ----------
-    - HI-RES IMAGES
-    ----------- -->
+  
+  <footer>
+    <small>Made with ♻ in only HTML</small>
+  </footer>
 
   <!-- For the PHOTOS grid -->
 
   <a href="#photos" class="lightbox" id="img-01"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-02"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-03"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
-  <a href="#photos" class="lightbox" id="img-04"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-05"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-06"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
-  <a href="#photos" class="lightbox" id="img-07"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-08"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-09"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
-  <a href="#photos" class="lightbox" id="img-10"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-11"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-12"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
-  <a href="#photos" class="lightbox" id="img-13"><img loading="lazy" alt="" src="img/3000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-14"><img loading="lazy" alt="" src="img/4000x3000.png"></a>
-  <a href="#photos" class="lightbox" id="img-15"><img loading="lazy" alt="" src="img/3000x4000.png"></a>
 
   <!-- Other images -->
 
