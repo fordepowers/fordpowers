@@ -13,25 +13,31 @@
 
 body {
   font-size: 18px;
-  font-family: -webkit-pictograph, system-ui;
+  font-family: system-ui, sans-serif;
   line-height: 1.4;
   color: var(--textcolor);
   background: var(--bgcolor);
   position: relative;
   max-width: var(--maxwidth);
-  /* remove this for a full-width layout */
   margin: 0 auto;
 }
 
+/* ------ Scrollbar ------- */
+
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background-color: var(--bgcolor);
+  width: 6px !important;
+  background-color: var(--bgcolor) !important;
+  -webkit-overflow-scrolling: auto;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--highlight);
+  background: var(--highlight) !important;
+  -webkit-overflow-scrolling: auto;
   border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: var(--highlight) !important;
 }
 
 /* ------- Sections ------- */
@@ -107,7 +113,7 @@ h2, h3, h4 {
   margin: 1.6em 0 .6em 0;
 }
 
-figure > h2 {
+figure>h2 {
   font-size: 1.2em;
 }
 
@@ -293,7 +299,7 @@ section:target iframe {
 a[href*="//"]:after {
   font-weight: 300;
   font-size: .85em;
-  content: "\1F86D";
+  content: "\2197";
   /* top right arrow: ↗ */
   color: var(--textcolor);
   opacity: .25;
@@ -485,6 +491,7 @@ article time {
   body {
     font-size: 17px;
   }
+
   #contact {
     height: 100vh;
     padding-top: 40vh;
