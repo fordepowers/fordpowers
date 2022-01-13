@@ -8,7 +8,7 @@
   --textcolor: #dadada;
   --bgcolor: #111112;
   --highlight: #00d6ff;
-  --maxwidth: calc(64em)
+  --maxwidth: 70em
 }
 
 body {
@@ -84,19 +84,6 @@ nav a:not(:last-of-type) {
 }
 
 /* ------ Footer -------- */
-main {
-  position: relative;
-  min-height: 100vh;
-}
-
-footer {
-  position: absolute;
-  text-align: center;
-  background-color: var(--bgcolor);
-  height: 2.5em;
-  bottom: 0;
-  width: 100%;
-}
 
 /* ------- General ------- */
 
@@ -118,6 +105,10 @@ h2, h3, h4 {
   font-size: 1em;
   font-weight: 600;
   margin: 1.6em 0 .6em 0;
+}
+
+figure > h2 {
+  font-size: 1.2em;
 }
 
 span.blog {
@@ -145,11 +136,29 @@ ul {
 }
 
 ul li::marker {
-  content: "\2022   ";
+  content: "﹣";
+  font-weight: 800;
+}
+
+ul.contact li {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  text-align: center;
+  margin-left: 0;
+}
+
+ul.contact {
+  padding: 0;
+}
+
+ul.contact li::marker {
+  margin: 0;
+  content: none;
 }
 
 li {
   margin-bottom: .2em;
+  margin-left: .2em;
 }
 
 ul, ol {
@@ -169,7 +178,7 @@ hr {
   border: 0;
   background: currentColor;
   opacity: .2;
-  margin: 1.2em 0;
+  margin: 1em;
 }
 
 abbr {
@@ -393,7 +402,7 @@ article time {
   right: 0;
   height: 100vh;
   padding: 0 5vw 0 5vw;
-  max-width: 64em;
+  max-width: var(--maxwidth);
   margin: 0 auto;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -475,6 +484,10 @@ article time {
 @media only screen and (max-width: 680px) {
   body {
     font-size: 17px;
+  }
+  #contact {
+    height: 100vh;
+    padding-top: 40vh;
   }
 }
 
