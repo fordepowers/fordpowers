@@ -296,7 +296,7 @@ section:target iframe {
 
 /* External links */
 
-a[href*="//"]:after {
+p > a[href*="//"]:after {
   font-weight: 300;
   font-size: .85em;
   content: "\2197";
