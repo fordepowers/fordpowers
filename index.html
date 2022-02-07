@@ -57,14 +57,9 @@
             article, it was born out of my love of the cyberpunk genre and characters like the Technomancer.</p>
           <p>I focused that curiosity and when I was 16 I began studying Cybersecurity at Columbia Basin College. While
             still in college I landed a
-            full-time internship at <a href="https://www.pnnl.gov/">Pacific Northwest National Laboratory</a>, assisting
+            full-time internship at <a href="https://www.pnnl.gov/">Pacific Northwest National Laboratory</a> assisting
             an automated software testing team.
           </p>
-          <p>Something I think a lot of cyber
-            researchers miss is for there to be <em>information assurance</em> there has to first be
-            <em>information</em>.
-          </p>
-
           <p>In December of 2020 I received my Bachelor's of Applied Science in cybersecurity, and graduated cum laude.
             Shortly after, I was hired on as a Cybersecurity Engineer at PNNL.
           </p>
@@ -123,6 +118,72 @@
     <!-- BLOG -->
 
     <section id="blog">
+      <article id="01.21.2022">
+        <details>
+          <summary>
+            <span class="blog">Modern Web Testing <time>01.21.2022</time></span>
+          </summary>
+          <hr />
+          <p>A few years ago I started my software journey as a quality assurance intern assisting a development team.
+            At the time, we used many <i>older</i> industry tools to automate our quality checks, namely Selenium
+            Webdriver via Java.</p>
+          <p>Fast forward a few years, and now as an older and wiser web developer the task of finding tools to help our
+            team identify and triage issues fell into my slot on the Trello board. So, I set out to
+            find what's new on the scene and what could help developers with a modern <abbr
+              title="MongoDB, Express, React, NodeJS">MERN</abbr> stack.</p>
+          <h4>Memory Leaks - <a href="https://github.com/nolanlawson/fuite">Fuite</a></h4>
+          <p>First up is <code>fuite</code>, a memory leak testing tool. Oddly
+            enough, I don't see a lot of <abbr title="Single Page Application">SPA</abbr> developers testing
+            applications for memory leaks, even though it could be a breaking issue for the user, and one that is
+            frustratingly hard to debug.</p>
+          <p>Fuite does an excellent job of taking the hassle out of memory testing, by doing all the memory
+            consumption comparison for you (in a pretty straightforward and intelligent way) and then gives you actual
+            metrics you can use to measure improvement afterwords. I also thought basing the tool off of <a
+              href="https://pptr.dev/#?product=Puppeteer&version=v12.0.1&show=api-class-page">Puppeteer Pages</a> was
+            clever, as it's a solid standard and most of us will need to configure custom scenarios so the tool can
+            access privileged or
+            restricted routes.</p>
+          <p>For more info on how to use it, read the <a
+              href="https://nolanlawson.com/2021/12/17/introducing-fuite-a-tool-for-finding-memory-leaks-in-web-apps/">official
+              blog post & how to guide.</a></p>
+          <h4>Load & Stress - <a href="https://locust.io/">Locust.io</a></h4>
+          <p>Previously I had experience using JMeter as a stress & load testing tool for a few applications. It worked
+            well enough and has a large community supporting it, but I can definitely appreciate why someone made a
+            modern tool.</p>
+          <p>Pretty much all my previous gripes with JMeter (Java based, clunky interface, high initial time sink) are
+            fixed with <code>locust.io</code>. Python-based, gives you metrics and pretty
+            graphs out of the box so you can compare results across runs and code updates.</p>
+          <p>It's also capable of being much more than just a simple load balancing tool, but it remains easy enough to
+            setup for the layman. <i>(Open source is another big plus in my book)</i></p>
+          <h4>Integration - <a href="https://www.cypress.io/">Cypress</a></h4>
+          <p>Full feature integration testing (end to end testing) is a non-trivial pursuit. Depending on the complexity
+            of the application it can require large amounts of code in order to have the automated sequence perform
+            well. Having used Selenium Webdriver personally, while it still remains the standard for a number of
+            reasons, I don't think those reasons are particularly good. A couple of my grievances:</p>
+          <ul>
+            <li>It's unabstract and too specific when writing page interactions</li>
+            <li>Selenium is heavy as far as packages go - the Java implementation in particular is not easy to install
+            </li>
+            <li>It doesn't play nicely at all with any modern <abbr
+                title="Continuos Integration/Continuous Deployment">CI/CD</abbr> pipeline- we had to break things to get
+              it working</li>
+          </ul>
+          <p>Cypress is 100% easier and nicer to use. It's also Javascript, which, when you're writing JS anyways for
+            development makes life quite a bit easier.</p>
+          <h4>Unit - <a href="https://jestjs.io/">Jest</a></h4>
+          <p>Good ole' Jest. Can't say much really that hasn't already been said, Jest has remained as the standard for
+            Javascript unit testing for years, and decidedly deserves it's crown.</p>
+          <ul>
+            <li>It's lightweight (4kb unpacked)</li>
+            <li>Extensively documented</li>
+            <li>Has a massive community</li>
+            <li>It's actively maintained and has deep pockets due to Facebook money</li>
+          </ul>
+          <p>It also works with all the good stuff like Typescript, Babel and Node, so there's not really a case it
+            can't handle.</p>
+        </details>
+      </article>
+
       <article>
         <details>
           <summary>
@@ -144,6 +205,12 @@
             expand/contract this blog post section you're reading. All with just native HTML elements and CSS, who knew?
           </p>
 
+          <p><i>
+              (Did I
+              mention it has a <a
+                href="https://pagespeed.web.dev/report?url=https%3A%2F%2Ffordepowers.github.io%2F">perfect score on
+                Lighthouse?</a>)</i></p>
+
           <p>I started with the fantastic <a href="https://github.com/cadars/john-doe">john doe template</a> from cadars
             and
             added some flavor for building and hosting. </p>
@@ -156,11 +223,7 @@
             awesome to be able to edit this website, on my phone, using <a href="https://github.dev">Github's mobile
               editor</a> by typing HTML and then just... publishing... the HTML... like how it used to be. No project
             build dependencies, not even any Jekyll scripts to run on Github's end. Not that there's anything wrong with
-            that, it's just nice to remind people that we can in fact do it this way and still have it work.<small>
-            (Did I
-            mention it has a <a
-              href="https://pagespeed.web.dev/report?url=https%3A%2F%2Ffordepowers.github.io%2F">perfect score on
-              Lighthouse?</a>)</small></p>
+            that, it's just nice to remind people that we can in fact do it this way and still have it work.</p>
           <p>There's a bunch of other reasons why one would want to implement such a site - for instance most Tor users
             have Javascript turned entirely off on their browsers for security reasons, this site would still function
             100% in that case.</p>
