@@ -1,0 +1,62 @@
+---
+import experiences from "../collections/experiences.json";
+import AboutExperience from "../components/about-experience.astro";
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="About Me">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="About Me"
+      description="Hey - I'm a cybersecurity engineer from the PNW. I'm a cybersecurity engineer by education, a software developer by experience, and a tech enthusiast by nature."
+    />
+
+    <img src="https://camo.githubusercontent.com/8b00696e30bfb14bbf8806959f56eeaa90a77eb372a972ade2b92ed359c3cf66/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f61786e46475854364d7a7667592f67697068792e676966" class="relative z-30 w-full my-10 rounded-xl" />
+
+    <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Short Bio</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+    I grew up with a love of technology and an insatiable curiosity of how to
+    break things. This quickly led me to <em>The Dark Arts™</em> of information assurance and cybersecurity.
+    </p>
+
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Experience
+    </h2>
+    <div class="px-5 py-10">
+      {
+        experiences.map((experience, loop) => {
+          return (
+            <>
+              {loop == 0 || loop == 1 ? (
+                <div class="pb-10 border-l border-gray-200 dark:border-neutral-700">
+                  <AboutExperience
+                    dates={experience.dates}
+                    role={experience.role}
+                    company={experience.company}
+                    description={experience.description}
+                    logo={experience.logo}
+                  />
+                </div>
+              ) : (
+                <AboutExperience
+                  dates={experience.dates}
+                  role={experience.role}
+                  company={experience.company}
+                  description={experience.description}
+                  logo={experience.logo}
+                />
+              )}
+            </>
+          )
+        })
+      }
+    </div>
+
+  
+  </section>
+</Layout>

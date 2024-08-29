@@ -1,3 +1,13 @@
-# Ford Powers
-Hello! Not much to see here, this is my portfolio website.
-Trying to do this entire thing without javascript, purely in HTML & CSS for various reasons.
+# Aria Template
+
+This is a personal blog, portfolio, or blog template created for [Astro](https://astro.build).
+
+Astro port of [aria](https://github.com/static-templates/aria).
+
+![Aria Template Cover Photo](https://github.com/ccbikai/astro-aria/blob/main/public/assets/images/cover.png?raw=true)
+
+You can install this theme with the [Astro](https://astro.build) command like so:
+
+```js
+npm create astro@latest -- --template ccbikai/astro-aria
+```
